@@ -1,7 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5d7f80e6-0c29-4d79-8435-5b0e7d9a06ef" name="Changes" comment="" />
+    <list default="true" id="5d7f80e6-0c29-4d79-8435-5b0e7d9a06ef" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../HomeWork-1/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HomeWork-1/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HomeWork-1/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HomeWork-1/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HomeWork-1/HomeWork-1.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/HelloWorld.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/HelloWorld.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -26,14 +34,15 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Projects/Java/Java-Prof/HomeWork1"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Projects/Java/Java-Prof/HomeWork1&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Projects\JavaProf\HomeWork1" />
@@ -51,6 +60,8 @@
       <workItem from="1667402519419" duration="1811000" />
       <workItem from="1667499487813" duration="57000" />
       <workItem from="1667499897749" duration="193000" />
+      <workItem from="1667500472078" duration="699000" />
+      <workItem from="1667501186170" duration="93000" />
     </task>
     <servers />
   </component>
