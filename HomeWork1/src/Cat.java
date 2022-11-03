@@ -13,7 +13,7 @@ public class Cat {
         System.out.println("Meow.");
     }
 
-    //@Override
+    @Override
     public String toString() {
         return "Cat{" +
                 "name='" + name + '\'' +
