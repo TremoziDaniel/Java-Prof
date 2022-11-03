@@ -13,6 +13,16 @@ public class Cat {
         System.out.println("Meow.");
     }
 
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        if (name != null) {
+            this.name = name;
+        }
+    }
+
     @Override
     public String toString() {
         return "Cat{" +
