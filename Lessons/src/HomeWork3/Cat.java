@@ -12,7 +12,7 @@ public class Cat extends Animal {
             System.out.println(kind + " has just run " + runDist + " meter.");
         else if (runDist == 0)
             System.out.println(kind + " stayed put.");
-        else if (runDist <= 200)
+        else if (runDist <= 200 && runDist > 0)
             System.out.println(kind + " has just run " + runDist + " meters.");
         else
             System.out.println(kind + " is astonished.");
