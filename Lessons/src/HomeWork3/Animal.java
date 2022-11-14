@@ -4,7 +4,7 @@ abstract public class Animal implements IAnimal {
     protected double runDist;
     protected double swimDist;
     protected String kind = "Animal";
-    protected static int amount = 0;
+    private static int amount = 0;
 
     public Animal(double runDist, double swimDist) {
         this.runDist = runDist;
