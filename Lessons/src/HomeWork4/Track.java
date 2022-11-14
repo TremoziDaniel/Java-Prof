@@ -8,11 +8,20 @@ public class Track implements IObstacles{
         this.length = length;
     }
 
+    @Override
+    public String getType() {
+        return type;
+    }
+
+    @Override
     public double len() {
         return length;
     }
 
-    public String getType() {
-        return type;
+    @Override
+    public String toString() {
+        return "Track{" +
+                "length=" + length +
+                '}';
     }
 }

@@ -17,8 +17,14 @@ public class Robot implements IRunners {
         }
     }
 
+    @Override
+    public String getType() {
+        return kind;
+    }
+
+    @Override
     public void run(IObstacles track) {
-        if(inGame) {
+        if(inGame && track.getType() == "track") {
             if(track.len() <= runSupremum)
                 System.out.println(kind + " has succesfully overcame the track.");
             else {
@@ -28,8 +34,9 @@ public class Robot implements IRunners {
         }
     }
 
+    @Override
     public void jump(IObstacles wall) {
-        if(inGame) {
+        if(inGame && wall.getType() == "wall") {
             if(wall.len() <= jumpSupremum)
                 System.out.println(kind + " has succesfully jumped over the wall.");
             else {
@@ -37,5 +44,14 @@ public class Robot implements IRunners {
                 inGame = false;
             }
         }
+    }
+
+    @Override
+    public String toString() {
+        return "Robot{" +
+                "runSupremum=" + runSupremum +
+                ", jumpSupremum=" + jumpSupremum +
+                ", inGame=" + inGame +
+                '}';
     }
 }

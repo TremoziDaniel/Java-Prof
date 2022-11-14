@@ -8,11 +8,20 @@ public class Wall implements IObstacles {
         this.height = height;
     }
 
+    @Override
+    public String getType() {
+        return type;
+    }
+
+    @Override
     public double len() {
         return height;
     }
 
-    public String getType() {
-        return type;
+    @Override
+    public String toString() {
+        return "Wall{" +
+                "height=" + height +
+                '}';
     }
 }

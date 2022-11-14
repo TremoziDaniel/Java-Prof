@@ -9,10 +9,8 @@ public class RunWithObstacles {
         for (IObstacles obstacle : obstacles) {
             System.out.println(n + " obstacle.");
             for (IRunners runner : Runners) {
-                if (obstacle.getType() == "track")
-                    runner.run(obstacle);
-                else if (obstacle.getType() == "wall")
-                    runner.jump(obstacle);
+                runner.run(obstacle);
+                runner.jump(obstacle);
             }
             n++;
         }
