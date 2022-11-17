@@ -1,5 +1,5 @@
 package HomeWork3;
-import static HomeWork3.Animal.wchAmount;
+import static HomeWork3.Animal.getAmount;
 
 public class MainZoo {
     public static void main(String[] args) {
@@ -13,6 +13,6 @@ public class MainZoo {
             animal.swim();
         }
 
-        wchAmount();
+        getAmount();
     }
 }

@@ -20,7 +20,7 @@ abstract public class Animal implements IAnimal {
         System.out.println("undefined object can't swim");
     }
 
-    public static void wchAmount() {
+    public static void getAmount() {
         System.out.println(amount);
     }
 
