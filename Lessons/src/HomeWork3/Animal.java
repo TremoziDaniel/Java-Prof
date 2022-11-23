@@ -1,4 +1,4 @@
-package HomeWork3;
+package homeWork3;
 
 abstract public class Animal implements IAnimal {
     protected double runDist;

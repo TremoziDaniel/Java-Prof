@@ -1,4 +1,4 @@
-package HomeWork4;
+package homeWork4;
 
 public class Wall implements IObstacles {
     static final String type = "wall";

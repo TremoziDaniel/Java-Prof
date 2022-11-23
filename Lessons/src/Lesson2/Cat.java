@@ -1,4 +1,4 @@
-package Lesson2;
+package lesson2;
 
 public class Cat extends Animal {
     public Cat(String name, String color, int age) {

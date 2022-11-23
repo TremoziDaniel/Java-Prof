@@ -1,4 +1,4 @@
-package HomeWork4;
+package homeWork4;
 
 public class Human implements IRunners {
     static final String kind = "Human";

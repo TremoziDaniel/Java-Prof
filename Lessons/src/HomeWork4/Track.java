@@ -1,4 +1,4 @@
-package HomeWork4;
+package homeWork4;
 
 public class Track implements IObstacles{
     static final String type = "track";

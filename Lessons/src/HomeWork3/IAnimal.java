@@ -1,4 +1,4 @@
-package HomeWork3;
+package homeWork3;
 
 public interface IAnimal {
     public void run();

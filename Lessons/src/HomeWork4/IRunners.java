@@ -1,4 +1,4 @@
-package HomeWork4;
+package homeWork4;
 
 public interface IRunners {
     public void jump(IObstacles track);

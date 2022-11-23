@@ -1,4 +1,4 @@
-package HomeWork4;
+package homeWork4;
 
 public class RunWithObstacles {
     public static void main(String[] args) {

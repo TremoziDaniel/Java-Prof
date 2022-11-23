@@ -1,4 +1,4 @@
-package HomeWork3;
+package homeWork3;
 
 public class Cat extends Animal {
     String kind = "Cat";
