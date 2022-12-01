@@ -9,7 +9,7 @@ public class RubberList<T> {
         if (first == null) {
             first = new Node<>(value, null, null);
             size = 1;
-        } else if (last == null) {
+        } else if (first.next == null) {
             last = new Node<>(value, first, null);
             first.next = last;
             size++;
@@ -19,6 +19,14 @@ public class RubberList<T> {
             last = mid;
             size++;
         }
+    }
+
+    public T getFirst() {
+        return first == null ? null : first.value;
+    }
+
+    public T getLast() {
+        return last == null ? null : last.value;
     }
 
     public boolean remove(T value) {
@@ -31,6 +39,7 @@ public class RubberList<T> {
                 } else if (first.next == last) {
                     first = last;
                     first.prev = null;
+//                    last = null;
                 } else {
                     first = null;
                 }
