@@ -7,6 +7,16 @@ public class RubberList<T> implements Iterable<T> {
     private Node<T> first;
     private Node<T> last;
 
+    public T poll() {
+        T value = first == null ? null : first.value;
+        remove(0);
+        return value;
+    }
+
+    public T peek() {
+        return first == null ? null : first.value;
+    }
+
     public void push(T value) {
         if (first == null) {
             first = new Node<>(value, null, null);
@@ -182,6 +192,4 @@ public class RubberList<T> implements Iterable<T> {
             this.next = next;
         }
     }
-
-
 }
