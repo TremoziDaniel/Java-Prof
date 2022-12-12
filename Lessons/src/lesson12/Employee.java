@@ -6,7 +6,7 @@ public class Employee {
     private Position position;
     private double salary;
     private int age;
-    private static int count = 1_000;
+    private static int count = 0;
 
     public Employee(String name, Position position, double salary, int age) {
         this.name = name;
