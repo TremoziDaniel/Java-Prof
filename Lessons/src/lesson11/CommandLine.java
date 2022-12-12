@@ -1,16 +1,15 @@
-package lesson10;
+package lesson11;
 
 import java.util.Scanner;
 
 public class CommandLine {
     public void exec() {
-        Database db = new Database();
-        db.init(DBInit.init());
+        Database db = new Database(DBInit.init());
         Scanner scanner = new Scanner(System.in);
         while(true) {
             System.out.print("# ");
             String cmd = scanner.next();
-            switch(cmd.toLowerCase().charAt(0)) {
+            switch(cmd.charAt(0)) {
                 case 'c' :
                     db.create();
                     break;
@@ -22,6 +21,9 @@ public class CommandLine {
                     break;
                 case 'd':
                     db.delete();
+                    break;
+                case 'f':
+                    db.find();
                     break;
                 case 'x':
                     System.out.println("Finish / Exit of program");
