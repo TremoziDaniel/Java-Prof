@@ -6,7 +6,7 @@ public class CommandLine {
     public void exec() {
         Database db = new Database(DBInit.init());
         Scanner scanner = new Scanner(System.in);
-        System.out.println("CRUD-v12");
+        System.out.println("CRUD-v12.1");
         while(true) {
             System.out.print("# ");
             String cmd = scanner.next();
@@ -29,11 +29,14 @@ public class CommandLine {
                 case 'p':
                     db.positions();
                     break;
+                case 's':
+                    db.sort();
+                    break;
                 case 'x':
                     System.out.println("Finish / Exit of program");
                     return;
                 default:
-                    System.out.println("List of command: c[reate], r[ead], u[pdate], d[elete], f[ind], p[osition], e[x]it");
+                    System.out.println("List of command: c[reate], r[ead], u[pdate], d[elete], f[ind], p[osition], s[ort], e[x]it");
             }
         }
     }

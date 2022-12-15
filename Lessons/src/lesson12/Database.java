@@ -88,4 +88,29 @@ public class Database {
         }
         System.out.println(new HashSet<>(positions));
     }
+
+    public void sort() {
+        Comparator<Employee> comparator;
+        String type = DataUtil.getString("Sort by: ");
+        switch(type.toLowerCase().charAt(0)) {
+            case 'n':
+                comparator = new ComparatorName();
+                break;
+            case 'p':
+                comparator = new ComparatorPosition();
+                break;
+            case 's':
+                comparator = new ComparatorSalary();
+                break;
+            case 'a':
+                comparator = new ComparatorAge();
+                break;
+            default:
+                System.out.println("Error! Irregular input. Write [n]ame, [a]ge or [s]alary");
+                return;
+        }
+        List<Employee> sortedList = new ArrayList<>(employees);
+        sortedList.sort(comparator);
+        DataUtil.print(sortedList);
+    }
 }
