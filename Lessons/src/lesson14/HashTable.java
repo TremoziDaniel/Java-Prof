@@ -1,9 +1,9 @@
 package lesson14;
 
-import java.util.Arrays;
+
 
 public class HashTable<K, V> {
-    private int capacity = 2;
+    private int capacity = 12;
     private Entry<K, V>[] table = new Entry[capacity];
     private int size = 0;
 
@@ -21,22 +21,58 @@ public class HashTable<K, V> {
             pointer.next = entry;
         }
         size++;
+
+//        if (capacity * 0.7 <= size) {
+//            capacity *= 2;
+//        }
     }
 
     public V get(K key) {
         int hash = key.hashCode();
         int idx = hash & (capacity - 1);
         if (table[idx] == null) {
+
             return null;
         }
         Entry<K, V> pointer = table[idx];
         do {
             if (pointer.key.equals(key)) {
+
                 return pointer.value;
             }
             pointer = pointer.next;
         } while (pointer != null);
+
         return null;
+    }
+
+    public boolean remove(K key) {
+        int hash = key.hashCode();
+        int idx = hash & (capacity - 1);
+        if (table[idx] == null) {
+
+            return false;
+        }
+        Entry<K, V> pointer = table[idx];
+        Entry<K, V> tmPointer = null;
+        do {
+            if (pointer.key.equals(key)) {
+                if(tmPointer == null) {
+                    pointer.key = null;
+                    pointer.hash = -1;
+                }
+                else {
+                    tmPointer.next = pointer.next;
+                }
+                size --;
+
+                return true;
+            }
+            tmPointer = pointer;
+            pointer = pointer.next;
+        } while (pointer != null);
+
+        return false;
     }
 
     private class Entry<K, V> {
@@ -60,10 +96,12 @@ public class HashTable<K, V> {
             if(entry != null) {
                 Entry<K, V> pointer = entry;
                 do {
-                    sb.append(pointer.key + "=" + pointer.value);
-                    counter++;
-                    if (counter < size) {
-                        sb.append(", ");
+                    if (pointer.hash >= 0) {
+                        sb.append(pointer.key + "=" + pointer.value);
+                        counter++;
+                        if (counter < size) {
+                            sb.append(", ");
+                        }
                     }
                     pointer = pointer.next;
                 } while (pointer != null);

@@ -6,15 +6,11 @@ public class Lesson14 {
     public static void main(String[] args) {
         HashTable<String, String> hashT = new HashTable<>();
         hashT.put("Kiev", "Ukraine");
-        hashT.put("Kiev", "Ukraine");
         hashT.put("Krakow", "Poland");
         hashT.put("Paris", "France");
         hashT.put("Amsterdam", "Niderland");
         hashT.put("Moscow", "Russia");
-        System.out.println(hashT.get("Kiev"));
-        System.out.println(hashT.get("Krakow"));
-        System.out.println(hashT.get("Amsterdam"));
-        System.out.println(hashT.get("Moscow"));
+        hashT.remove("Krakow");
         System.out.println(hashT);
 //        Map<String, String> map = new HashMap<>();
 //        map.put("Kiev", "Ukraine");
