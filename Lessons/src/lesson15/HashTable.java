@@ -3,7 +3,7 @@ package lesson15;
 
 
 public class HashTable<K, V> {
-    private int capacity = 30;
+    private int capacity = 15;
     private Entry<K, V>[] table;
     private int size = 0;
 
@@ -28,20 +28,17 @@ public class HashTable<K, V> {
             table[idx] = entry;
         } else {
             Entry<K, V> pointer = table[idx];
-            while (pointer.next != null) {
-                if (pointer.key == key ) {
+            Entry<K, V> tmPointer;
+            do {
+                if (pointer.key.equals(key)) {
                     pointer.value = value;
 
                     return;
                 }
+                tmPointer = pointer;
                 pointer = pointer.next;
-            }
-            if (pointer.key == key) {
-                pointer.value = value;
-
-                return;
-            }
-            pointer.next = entry;
+            } while (pointer != null);
+            tmPointer.next = entry;
         }
         size++;
 
@@ -69,12 +66,12 @@ public class HashTable<K, V> {
         return null;
     }
 
-    public boolean remove(K key) {
+    public Entry<K, V> remove(K key) {
         int hash = key.hashCode();
         int idx = hash & (capacity - 1);
         if (table[idx] == null) {
 
-            return false;
+            return null;
         }
         Entry<K, V> pointer = table[idx];
         Entry<K, V> tmPointer = null;
@@ -88,13 +85,13 @@ public class HashTable<K, V> {
                 }
                 size --;
 
-                return true;
+                return pointer;
             }
             tmPointer = pointer;
             pointer = pointer.next;
         } while (pointer != null);
 
-        return false;
+        return null;
     }
 
     public class Entry<K, V> {

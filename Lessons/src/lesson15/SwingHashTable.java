@@ -37,6 +37,9 @@ public class SwingHashTable extends JFrame {
             if (tokens[0].equals("put")){
                 hashT.put(tokens[1], tokens[2]);
             }
+            if (tokens[0].equals("remove")){
+                hashT.remove(tokens[1]);
+            }
             textField.setText("");
             canvasPanel.repaint();
         });
@@ -61,6 +64,7 @@ public class SwingHashTable extends JFrame {
         hashT.put("Moscow", "Russia");
         hashT.put("Warsaw", "Poland");
         hashT.put("Madrid", "Spain");
+        hashT.remove("Krakow");
     }
 
     private class CanvasPanel extends JPanel {
