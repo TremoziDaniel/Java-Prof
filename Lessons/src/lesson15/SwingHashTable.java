@@ -28,19 +28,25 @@ public class SwingHashTable extends JFrame {
         canvasPanel.setPreferredSize(new Dimension(WIDTH_SIZE, HEIGHT_SIZE));
         canvasPanel.setBackground(Color.lightGray);
 
+        initHashTable();
+
         JTextField textField = new JTextField("Write", 1);
         JButton enterButton = new JButton("Enter");
         enterButton.addActionListener(e -> {
             // TODO
             System.out.println("#: " + textField.getText());
             String[] tokens = textField.getText().split(" ");
+            String result = "";
             if (tokens[0].equals("put")){
                 hashT.put(tokens[1], tokens[2]);
             }
             if (tokens[0].equals("remove")){
                 hashT.remove(tokens[1]);
             }
-            textField.setText("");
+            if (tokens[0].equals("get")){
+                result = hashT.get(tokens[1]);
+            }
+            textField.setText(result);
             canvasPanel.repaint();
         });
         JPanel bottomPanel = new JPanel();
@@ -64,7 +70,6 @@ public class SwingHashTable extends JFrame {
         hashT.put("Moscow", "Russia");
         hashT.put("Warsaw", "Poland");
         hashT.put("Madrid", "Spain");
-        hashT.remove("Krakow");
     }
 
     private class CanvasPanel extends JPanel {
@@ -72,16 +77,14 @@ public class SwingHashTable extends JFrame {
         public void paint(Graphics g) {
             super.paint(g);
             HashTable<String, String>.Entry<String, String>[] table = hashT.getTable();
-            initHashTable();
             // TODO
             int x = 10;
             int y = 20;
             final int DX = 65;
             final int DY = 65;
-            int xTemp = 0;
             int chain = 0;
             int maxChain = 0;
-            for (int i = 0; i < hashT.getTable().length; i++) {
+            for (int i = 0; i < table.length; i++) {
                 if (x >= WIDTH_SIZE - 70) {
                     x = 10;
                     y = maxChain + 70;
