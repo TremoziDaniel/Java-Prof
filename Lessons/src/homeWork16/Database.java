@@ -1,4 +1,8 @@
-package lesson12;
+package homeWork16;
+
+import lesson12.DataUtil;
+import lesson12.Employee;
+import lesson12.Position;
 
 import java.util.*;
 
@@ -6,7 +10,7 @@ public class Database {
     List<Employee> employees;
     Map<Integer, Employee> idxEmployees;
 
-    public Database (List<Employee> employees) {
+    public Database(List<Employee> employees) {
         // create List
         this.employees = new ArrayList<>(employees);
 //        this.employees.addAll(employees);
