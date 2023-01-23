@@ -1,7 +1,7 @@
 package homeWork16;
 
 import java.util.Iterator;
-
+// From lesson12
 public class RubberList<T> implements Iterable<T> {
     private int size;
     private Node<T> first;

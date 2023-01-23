@@ -1,6 +1,6 @@
 package lesson6;
 
-public class RubberArray<T extends Number> {
+public class RubberArray<T /*extends Number*/> {
         private T[] array;
 
         public void add(T item) {
