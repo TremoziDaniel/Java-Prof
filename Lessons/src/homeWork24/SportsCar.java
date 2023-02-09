@@ -7,7 +7,7 @@ public class SportsCar {
 
     public SportsCar(String name) {
         this.name = name; // Name of sportscar rider
-        number = ++sportscarsAmount; // Gives sportscar a number
+        number = sportscarsAmount++; // Gives sportscar a number
     }
 
     public static int getSportscarsAmount() {

@@ -3,7 +3,7 @@ package homeWork24;
 public class Races {
     private static final Object node = new Object();
     int circles;
-    static int circleFinishesCount = 0;
+    static int circleFinishesCount = 1;
     boolean finish = false;
 
     public Races(int circles) {
@@ -22,7 +22,7 @@ public class Races {
                         if (circleFinishesCount == sportsCar.getSportscarsAmount()) {
 //                            Thread.sleep(200);
 //                            System.out.println("All participants finished " + i + " circle.");
-                            circleFinishesCount = 0; // If everyone finished circle wakes up all Threads
+                            circleFinishesCount = 1; // If everyone finished circle wakes up all Threads
                             node.notifyAll();
                         }
                         if (i == circles) {
