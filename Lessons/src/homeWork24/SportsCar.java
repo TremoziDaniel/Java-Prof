@@ -1,7 +1,7 @@
 package homeWork24;
 
 public class SportsCar {
-    private static int sportscarsAmount = 0;
+    private int sportscarsAmount = 0;
     String name;
     int number;
 
@@ -10,7 +10,7 @@ public class SportsCar {
         number = sportscarsAmount++; // Gives sportscar a number
     }
 
-    public static int getSportscarsAmount() {
+    public int getSportscarsAmount() {
         return sportscarsAmount;
     }
 
