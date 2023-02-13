@@ -5,7 +5,7 @@ import java.util.concurrent.Semaphore;
 import static homeWork25.RaceDemo.CARS_COUNT;
 
 public class Tunnel extends Stage {
-    private static Semaphore SEMAPHORE = new Semaphore(CARS_COUNT/2, true);
+    private final static Semaphore SEMAPHORE = new Semaphore(CARS_COUNT/2, true);
     public Tunnel(int length) {
         this.length = length;
         this.description = "Тоннель " + length + " метров";
