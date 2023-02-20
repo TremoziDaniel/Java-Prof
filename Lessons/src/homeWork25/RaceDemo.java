@@ -1,6 +1,12 @@
 package homeWork25;
 
-
+/*
+ * HomeWork25
+ *
+ *  @author Danil Izmajlov
+ *  13.02.2023
+ *  Tel-Ran
+ */
 public class RaceDemo {
     public static final int CARS_COUNT = 4;
 

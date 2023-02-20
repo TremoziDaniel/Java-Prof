@@ -15,10 +15,10 @@ public class Tunnel extends Stage {
     public void go(Car c, int i) {
         System.out.println(c.getName() + " готовится к этапу " + i + "(ждет): " + description);
         try {
-            SEMAPHORE.acquire();
+            SEMAPHORE.acquire(1);
                 try {
                     System.out.println(c.getName() + " начал этап " + i + ": " + description);
-                    Thread.sleep(length / c.getSpeed() * 1000);
+                    Thread.sleep((long)(length / c.getSpeed() * 1000));
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 } finally {

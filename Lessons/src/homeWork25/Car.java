@@ -4,9 +4,9 @@ import java.util.concurrent.CountDownLatch;
 
 public class Car implements Runnable {
     private static CountDownLatch CARS_COUNTDOWN;
-    protected static int CARS_COUNT;
+    protected static int carAmount;
     private Race race;
-    private int speed;
+    private float speed;
     private String name;
     private static boolean winner = false;
     private static long lastThread;
@@ -15,14 +15,14 @@ public class Car implements Runnable {
     public synchronized String getName() {
         return name;
     }
-    public int getSpeed() {
+    public double getSpeed() {
         return speed;
     }
-    public Car(Race race, int speed) {
+    public Car(Race race, float speed) {
         this.race = race;
         this.speed = speed;
-        this.name = "Участник #" + ++CARS_COUNT;
-        CARS_COUNTDOWN = new CountDownLatch(CARS_COUNT);
+        this.name = "Участник #" + ++carAmount;
+        CARS_COUNTDOWN = new CountDownLatch(carAmount);
     }
 
     @Override
@@ -34,7 +34,7 @@ public class Car implements Runnable {
             System.out.println(this.name + " готов");
             CARS_COUNTDOWN.countDown();
             CARS_COUNTDOWN.await();
-            CARS_COUNTDOWN = new CountDownLatch(CARS_COUNT);
+            CARS_COUNTDOWN = new CountDownLatch(carAmount);
             if (Thread.currentThread().getId() == lastThread) {
                 System.out.println("ВАЖНОЕ ОБЪЯВЛЕНИЕ >>> Гонка началась!!!");
             }
