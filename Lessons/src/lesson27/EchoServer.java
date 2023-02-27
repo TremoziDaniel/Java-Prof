@@ -26,7 +26,11 @@ public class EchoServer {
                 do {
                     message = reader.readLine();
                     System.out.println("Client say: " + message);
-                    writer.println("Echo: " + message);
+                    try {
+                        writer.println((message.equals("exit") ? "" : "Echo: ") + message);
+                    } catch (NullPointerException e) {
+                        message = "exit";
+                    }
                     writer.flush();
                 } while (!message.equals("exit"));
                 System.out.println("Client disconnected.");
